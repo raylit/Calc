@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>계산기</title>
+</head>
+
+<body>
+	<div style="position:relative; left: calc(50% - 300px);">
+	<input type="text" placeholder="내 시급" size="30" id="pay">원
+	<input type="text" placeholder="일한 시간" size="20" id="time">시간
+	<button id="butn">이번 달 내 월급은 얼마?</button>
+	<br>
+	<br>
+	<div id="output" style="width:600px; height:200px; background:orange; color:white;
+	text-align:center; line-height: 200px; font-size:1.3em; font-weight:bold;"> 이번 달 나는 얼마나 벌었을까요?</div>
+	</div>
+	<script type="text/javascript">
+
+		butn.onclick = function(){
+
+			var myMoney = pay.value * time.value;
+			var finalOutput = "당신의 이번 달 월급은 " + myMoney + "원입니다. 고생했어요.";
+
+			output.innerHTML = finalOutput;
+		}
+
+	</script>
+</body>
+</html>
